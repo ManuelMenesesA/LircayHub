@@ -23,6 +23,17 @@
   </head>
 
   <body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SNF0NJ0BN4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SNF0NJ0BN4');
+</script>
+<!-- fin google Analytics-->
+
     <div class="container-scroller">
       <div class="main-panel">
         <!-- partial:../partials/_navbar.html -->
@@ -48,7 +59,7 @@
               <div class="navbar-bottom">
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a class="navbar-brand" href="#"
+                    <a class="navbar-brand" href=""
                       ><img src="../assets/images/logo.svg" alt=""
                     /></a>
                   </div>
@@ -76,7 +87,7 @@
                           </button>
                         </li>
                         <li class="nav-item active">
-                                <a class="nav-link" href="./index.html">Home</a>
+                                <a class="nav-link" href="../index.php">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="elecciones.php">Elecciones 2021</a>
@@ -133,7 +144,7 @@
                 <span class="badge badge-dark mr-3"></span>
                 <p class="mb-0">
               <div>
-              <a class="btn btn-primary" href="form.php" role="button">Agregar Contenido</a>
+              <a class="btn btn-primary" href="newtema.php" role="button">Agregar Tema</a>
               </div>
                 </p>
               </div>
@@ -152,7 +163,7 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <h1 class="font-weight-600 mb-4">
-                        Cambio climatico
+                        Propuestos Por Los Usuarios
                       </h1>
                     </div>
                   </div>
@@ -170,20 +181,23 @@
                         </div>
                         <div class="col-sm-8 grid-margin">
                          <?php
-                                  $query = "SELECT * FROM informacion WHERE tema = 3 ORDER BY fecha";
+                                  $query = "SELECT * FROM temas_nuevos ";
                                   $result= mysqli_query($conn, $query);
 
-                                  while($row = mysqli_fetch_assoc($result)) { ?>
+                          while($row = mysqli_fetch_assoc($result)) { ?>
                           <h2 class="font-weight-600 mb-2">
-                            <a  href="<?php  echo $row['contenido']; ?>" class="d-flex flex-column justify-content-start ml-2"><span class="d-block font-weight-bold name"><?php  echo $row['titulo']; ?></span></a>
+                           <?php  echo $row['titulo_t']; ?>
                           </h2>
                           <p class="fs-13 text-muted mb-0">
-                            <span class="mr-2">Photo </span><?php echo $row['fecha']; ?>
+                            <span class="mr-2">Fecha de la publicacion </span><?php echo $row['fecha']; ?>
                           </p>
                           <p class="fs-15">
-                           <?php echo $row['descripcion']; ?>
+                           <?php echo $row['descripcion_t']; ?>
                           </p>
                           <?php } ?>
+                        </div>
+                        <div>
+
                         </div>
                       </div>
 

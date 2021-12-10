@@ -21,6 +21,17 @@
 </head>
 
 <body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SNF0NJ0BN4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SNF0NJ0BN4');
+</script>
+<!-- fin google Analytics-->
+
     <div class="container-scroller">
         <div class="main-panel">
             <!-- partial:../partials/_navbar.html -->
@@ -144,7 +155,7 @@
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <h1 class="font-weight-600 mb-4">
-                                            Cambio climatico
+                                            Ciencia de Datos
                                         </h1>
                                     </div>
                                 </div>

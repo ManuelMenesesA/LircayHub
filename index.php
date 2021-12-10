@@ -25,6 +25,16 @@
   </head>
 
   <body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SNF0NJ0BN4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SNF0NJ0BN4');
+</script>
+<!-- fin google Analytics-->
     <div class="container-scroller">
       <div class="main-panel">
         <!-- partial:partials/_navbar.html -->
@@ -92,7 +102,7 @@
                                 </button>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="index.php">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="pages/elecciones.php">Elecciones 2021</a>

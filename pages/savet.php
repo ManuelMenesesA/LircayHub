@@ -6,11 +6,9 @@ $fecha=date("y-m-d h:i:s");
 if (isset($_POST['send'])) {
 
 
-  $tema_new = $_POST['titulo_t'];
+  $titulo_t= $_POST['titulo_t'];
   $descripcion_t = $_POST['descripcion_t'];
-  $me_gusta = $_POST['me_gusta'];
-  $no_megusta = $_POST['no_megusta'];
-  $query = "INSERT INTO informacion(nombre_tema, descripcion_t, fecha, me_gusta,no_megusta) VALUES ('$titulo_t', '$descripcion_t','$fecha', '$me_gusta','$no_megusta')";
+  $query = "INSERT INTO temas_nuevos(titulo_t, descripcion_t, fecha) VALUES ('$titulo_t', '$descripcion_t','$fecha')";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");

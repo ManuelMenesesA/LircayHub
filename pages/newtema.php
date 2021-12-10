@@ -1,7 +1,7 @@
 <?php
 
 include("connection.php");
-include("save.php");
+include("savet.php");
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +24,16 @@ include("save.php");
   </head>
 
   <body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SNF0NJ0BN4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SNF0NJ0BN4');
+</script>
+<!-- fin google Analytics-->
     <?
     date_default_timezone_set('America/Santiago');
     $fecha_actual=date("y-m-d h:i:s");
@@ -96,7 +106,7 @@ include("save.php");
                             <i class="mdi mdi-close"></i>
                           </button>
                         </li>
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="elecciones.php">Elecciones 2021</a>
@@ -117,7 +127,7 @@ include("save.php");
                                 <a class="nav-link" href="cine.php">U. Cinematografico</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contactus.html">Contact</a>
+                                <a class="nav-link" href="temas.php">Temas por Usuarios</a>
                             </li>
                       </ul>
                     </div>
@@ -149,17 +159,7 @@ include("save.php");
         <div class="flash-news-banner">
           <div class="container">
             <div class="d-lg-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                <span class="badge badge-dark mr-3">Flash news</span>
-                <p class="mb-0">
-                  Lorem Ipsum has been the industry's standard dummy text ever
-                  since the 1500s.
-                </p>
-              </div>
-              <div class="d-flex">
-                <span class="mr-3 text-danger">Wed, March 4, 2020</span>
-                <span class="text-danger">30°C,London</span>
-              </div>
+   
             </div>
           </div>
         </div>
@@ -171,7 +171,7 @@ include("save.php");
                   <div class="row">
                     <div class="col-sm-12">
                       <h1 class="font-weight-600 mb-4">
-                        Añadir contenido
+                        Agregar Tema
                       </h1>
                     </div>
                   </div>
@@ -179,39 +179,22 @@ include("save.php");
                     <div class="row">
                       <div class="col-lg-8">
                         <div class="row">
-                          <form action="save.php" method="POST">
-                            <select class="custom-select" name="tema">
-                              <option selected>Seleccione tema</option>
-                              <option value="1">Elecciones 2021</option>
-                              <option value="2">Clasificatorias Qatar 2022</option>
-                              <option value="3">Cambio climatico</option>
-                              <option value="4">Energía renovable</option>
-                              <option value="5">Ciencia de datos </option>
-                              <option value="6">Universo cinematografico</option>
-                            </select>
+                          <form action="savet.php" method="POST">
 
                               <div class="form-group">
                                 <label for="exampleFormControlInput1">Titulo</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" name="titulo">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" name="titulo_t">
                               </div>
                             
                               <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Descripcion</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion_t"></textarea>
                               </div>
                               <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Contenido</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="contenido"></textarea>
-                              </div>
-                              <div class="form-group">
-                                <label for="exampleFormControlTextarea1">URL</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="url"></textarea>
-                              </div>
-                              <div class="form-group">
-                                    <label for="exampleFormControlTextarea1" ><input type="datetime" name="fecha" value="<?=$fecha_actual?>"></input></label><br>
+                                    <label for="exampleFormControlTextarea1" ><input type="datetime" name="fecha" value="<?=$fecha?>"></input></label><br>
                               </div>
 
-                            <input type="submit" value="enviar" name="enviar"> </input>
+                            <input type="submit" value="send" name="send"> </input>
                           </form>
                           
                       <div class="col-lg-4">
